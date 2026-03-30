@@ -13,7 +13,10 @@ export const CreateForm: FC = () => {
       hx-post="/todos"
       hx-target="#todo-list"
       hx-swap="afterbegin"
-      hx-on--after-request="if(event.detail.successful) this.reset(); document.getElementById('empty-state')?.remove()"
+      {...{
+        "hx-on::after-request":
+          "if(event.detail.successful) this.reset(); document.getElementById('empty-state')?.remove()",
+      }}
       class="flex gap-2 mb-6"
     >
       <input

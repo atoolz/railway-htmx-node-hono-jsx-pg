@@ -82,8 +82,9 @@ const pool = connect();
 migrate()
   .then(() => {
     const port = parseInt(process.env.PORT || "8080", 10);
-    console.log(`Server starting on port ${port}`);
-    serve({ fetch: app.fetch, port });
+    const hostname = process.env.HOST || "0.0.0.0";
+    console.log(`Server listening on ${hostname}:${port}`);
+    serve({ fetch: app.fetch, port, hostname });
   })
   .catch((err) => {
     console.error("Failed to run migrations:", err);
