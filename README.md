@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://railway.com/deploy/htmx-hono-postgresql-starter-kit">
+  <a href="https://railway.com/deploy/htmx-hono-jsx-postgres">
     <img src="https://railway.com/button.svg" alt="Deploy on Railway">
   </a>
 </p>
