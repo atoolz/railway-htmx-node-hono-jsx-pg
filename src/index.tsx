@@ -1,10 +1,10 @@
 import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { serve } from "@hono/node-server";
-import { connect, migrate, getPool } from "./database";
-import { Home } from "./views/home";
-import { TodoItem } from "./views/components";
-import type { Todo } from "./views/components";
+import { connect, migrate, getPool } from "./database.js";
+import { Home } from "./views/home.js";
+import { TodoItem } from "./views/components.js";
+import type { Todo } from "./views/components.js";
 
 const app = new Hono();
 

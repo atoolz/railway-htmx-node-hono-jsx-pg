@@ -1,7 +1,7 @@
 import type { FC } from "hono/jsx";
-import { Layout } from "./layout";
-import { CreateForm, TodoItem } from "./components";
-import type { Todo } from "./components";
+import { Layout } from "./layout.js";
+import { CreateForm, TodoItem } from "./components.js";
+import type { Todo } from "./components.js";
 
 export const Home: FC<{ todos: Todo[] }> = ({ todos }) => {
   return (
